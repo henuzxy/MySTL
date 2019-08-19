@@ -5,7 +5,7 @@ Self-implemented Standard Template Library
 
 ### SplayTreeSet
 
-对应STL库的set,利用Splay来实现。插入，删除均摊时间复杂度是O(longN)。对于大量重复的数据，速度会更快，因为频率最高的value在Splay是出现在根节点周围的。这里的Splay是一个去重的容器。
+对应STL库的set,利用Splay来实现。插入，删除均摊时间复杂度是O(longN)。对于大量重复的数据，速度会更快，因为频率最高的value在Splay是出现在根节点周围的。这里的SplayTreeSet是一个去重的容器。
 
 这里是一些共有方法，使用户可以调用。
 
@@ -16,4 +16,8 @@ Self-implemented Standard Template Library
 | erase(value)  | 删除数据                |
 | size()        | 返回容器数据个数        |
 | count(value)  | 返回value在容器中的个数 |
+
+具体实现点击这里[实现细节](https://github.com/zhao5502169/MySTL/tree/master/SplayTreeSet)
+
+### SplayTreeMultiSet
 
