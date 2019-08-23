@@ -2,7 +2,7 @@
 
 Splay是一种伸展树，左旋右旋如下：
 
-![img](C:\Users\Surface\Desktop\MySTL\SplayTreeSet\1349877565_2986.png)
+![img](1349877565_2986.png)
 
 [图片来源](https://blog.csdn.net/a_comme_amour/article/details/79382104)
 
