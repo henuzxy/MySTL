@@ -52,7 +52,7 @@ void rotate(shared_ptr<Node> t){
 
 左右旋转可以自己多画一下，如下是一个右旋：
 
-![img](C:\Users\Surface\Desktop\MySTL\SplayTreeSet\右旋.PNG)
+![img](右旋.PNG)
 
 下面是扭转代码，即Splay函数
 

@@ -72,7 +72,7 @@ public:
         shared_ptr<Node> t = where_value(val);
         if(t == nullptr)
             return false;
-        size--;
+        Size--;
         splay(t,nullptr);
         if(t->son[lson] == nullptr){
             root = t->son[rson];
