@@ -19,5 +19,20 @@ Self-implemented Standard Template Library
 
 具体实现点击这里[实现细节](https://github.com/zhao5502169/MySTL/tree/master/SplayTreeSet)
 
-### SplayTreeMultiSet
+### SplayTreeMap
+
+对应STL库的map,依然时利用Splay来实现，实现插入、删除。以及重载了[]运算符，可以通过key来获得对应的value,这里与STL库中有所不同，STL库中map使用[]运算符，通过key获得对应的value，但key存在时，他会value类型的构造函数，并把这个键值对插入进去，但我觉得这样有时会让一些错误无法发现，我觉得插入应该只提供一种insert()即足够，所以在这里当调用[]运算符时，如果key不存在，会抛出一个out_of_range()异常。
+
+一些常用的方法。
+
+| 成员方法              | 作用                               |
+| --------------------- | ---------------------------------- |
+| clear()               | 清空所有数据                       |
+| insert(pair<T1,T2> p) | 插入键值对                         |
+| erase(T1 _key)        | 删除键为_key的键值对               |
+| size()                | 返回容器个数                       |
+| count(T1 _key)        | 返回key在容器中的个数              |
+| [T1 _key]             | 返回键为_key的值的引用，可以来修改 |
+
+
 
