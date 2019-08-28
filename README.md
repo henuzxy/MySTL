@@ -36,3 +36,18 @@ Self-implemented Standard Template Library
 
 
 
+### zxyHeap
+
+对于STL库的priority_queue,因为有限队列的底层其实也是堆，我是直接用堆来实现它的各个功能了，经过了大量数据的测试，功能均正常。
+
+一些常用方法
+
+| 成员方法  | 作用                         |
+| --------- | ---------------------------- |
+| clear()   | 清空容器                     |
+| push(val) | 放入数据val                  |
+| pop()     | 弹出堆顶                     |
+| top()     | 获得堆顶值                   |
+| size()    | 返回堆中元素个数             |
+| empty()   | 堆为空返回true,非空返回false |
+
