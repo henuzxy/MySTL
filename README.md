@@ -51,3 +51,18 @@ Self-implemented Standard Template Library
 | size()    | 返回堆中元素个数             |
 | empty()   | 堆为空返回true,非空返回false |
 
+### BinaryIndexTree
+
+叫做树状数组的数据结构，是一个查询和修改复杂度都为O(logN)的数据结构。可以实现单点修改，区间查询。
+
+一些常用方法
+
+| 成员方法                        | 作用                  |
+| ------------------------------- | --------------------- |
+| clear()                         | 清空容器中的数据      |
+| add(size_type p,value_type val) | 在p这个位置增加val    |
+| sum(size_type p)                | 返回[1,p]这个区间的和 |
+| sum(size_type L,size_type R)    | 返回[L,R]这个区间的和 |
+
+
+
