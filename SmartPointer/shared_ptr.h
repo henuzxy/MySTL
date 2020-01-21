@@ -1,11 +1,15 @@
+#include <iostream>
+#include <cstdlib>
 template<typename T>
 class shared_ptr{
 public:
+    shared_ptr(){
+        use = new size_t(0);
+        value = nullptr;
+    }
     shared_ptr(T * _value){
-        if(_value != nullptr){
-            value = _value;
-            use = new size_t(1);
-        }
+        this->value = _value;
+        use = new size_t(1);
     }
     ~shared_ptr(){
         *use -= 1;
@@ -14,14 +18,17 @@ public:
         }
     }
     shared_ptr(const shared_ptr<T> &ptr){
+        this->value = ptr.value;
+        this->use = ptr.use;
+        *(this->use) += 1;
+    }
+    shared_ptr& operator = (const shared_ptr<T> &ptr){
         this->value = ptr->value;
         this->use = ptr->use;
         *(this->use) += 1;
     }
-    shared_ptr& operator = (cosnt shared_ptr &ptr){
-        this->value = ptr->value;
-        this->use = ptr->use;
-        *(this->use) += 1;
+    size_t use_count(){
+        return *use;
     }
 private:
     size_t *use;
