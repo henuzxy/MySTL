@@ -7,6 +7,10 @@
 
 #ifndef _HASHSTRING_H
 #define _HASHSTRING_H
+#include <vector>
+#include <iostream>
+#include <string>
+using namespace std;
 class Hash{
 typedef long long ll;
 private:
