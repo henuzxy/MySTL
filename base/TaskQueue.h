@@ -28,7 +28,7 @@ public:
     }
 public:
     TaskQueue() = default;
-    ~TaskQueue() = default;
+    virtual ~TaskQueue() = default;
     TaskQueue(const TaskQueue&) = delete;
     TaskQueue& operator = (const TaskQueue&) = delete;
 };
