@@ -9,12 +9,12 @@ private:
     std::condition_variable cv;
 public:
     void push(const T& val){
-        std::unique_lock<std::mutex> ul;
+        std::unique_lock<std::mutex> ul(mx);
         ls.push_back(val);
         cv.notify_one();
     }
     T remove(){
-        std::unique_lock<std::mutex> ul;
+        std::unique_lock<std::mutex> ul(mx);
         while(ls.size() == 0){
             cv.wait(ul);
         }
@@ -23,7 +23,7 @@ public:
         return val;
     }
     size_t size(){
-        std::unique_lock<std::mutex> ul;
+        std::unique_lock<std::mutex> ul(mx);
         return ls.size();
     }
 public:
