@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bytedancde/MyGithub/MySTL/Base/defer.h
+
+/Users/bytedancde/MyGithub/MySTL/main.cpp
+iostream
+-
+Base/defer.h
+/Users/bytedancde/MyGithub/MySTL/Base/defer.h
+
