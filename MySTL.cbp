@@ -5,7 +5,7 @@
 		<Option title="MySTL"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\Base\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Base\;CMake Files\Tree\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/bytedancde/MyGithub/MySTL"/>
@@ -79,7 +79,59 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/bytedancde/MyGithub/MySTL/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="Tree">
+				<Option output="/Users/bytedancde/MyGithub/MySTL/Tree/libTree.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/bytedancde/MyGithub/MySTL/Tree"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/bytedancde/MyGithub/MySTL/Tree/Makefile&quot;  VERBOSE=1 Tree"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/bytedancde/MyGithub/MySTL/Tree/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/bytedancde/MyGithub/MySTL/Tree/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/bytedancde/MyGithub/MySTL/Tree/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tree/fast">
+				<Option output="/Users/bytedancde/MyGithub/MySTL/Tree/libTree.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/bytedancde/MyGithub/MySTL/Tree"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/bytedancde/MyGithub/MySTL/Tree/Makefile&quot;  VERBOSE=1 Tree/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/bytedancde/MyGithub/MySTL/Tree/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/bytedancde/MyGithub/MySTL/Tree/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/bytedancde/MyGithub/MySTL/Tree/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
+		<Unit filename="/Users/bytedancde/MyGithub/MySTL/Tree/BinaryIndexTree.h">
+			<Option target="Demo"/>
+		</Unit>
+		<Unit filename="/Users/bytedancde/MyGithub/MySTL/Tree/SplayTreeSet.cpp">
+			<Option target="Demo"/>
+			<Option target="Tree"/>
+		</Unit>
+		<Unit filename="/Users/bytedancde/MyGithub/MySTL/Tree/SplayTreeSet.h">
+			<Option target="Demo"/>
+		</Unit>
 		<Unit filename="/Users/bytedancde/MyGithub/MySTL/main.cpp">
 			<Option target="Demo"/>
 		</Unit>
@@ -88,6 +140,9 @@
 		</Unit>
 		<Unit filename="/Users/bytedancde/MyGithub/MySTL/Base/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Base\"/>
+		</Unit>
+		<Unit filename="/Users/bytedancde/MyGithub/MySTL/Tree/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Tree\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

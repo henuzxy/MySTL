@@ -11,6 +11,8 @@ aux_source_directory(. DIR_SRCS)
 
 # 添加子目录
 add_subdirectory(Base)
+add_subdirectory(Tree)
 #指定生产目标
-add_executable(Demo main.cpp)
+add_executable(Demo main.cpp Tree/SplayTreeSet.cpp Tree/SplayTreeSet.h Tree/BinaryIndexTree.h)
 
+# 添加链接库

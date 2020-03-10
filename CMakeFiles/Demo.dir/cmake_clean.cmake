@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Demo.dir/Tree/SplayTreeSet.cpp.o"
   "CMakeFiles/Demo.dir/main.cpp.o"
   "Demo"
   "Demo.pdb"

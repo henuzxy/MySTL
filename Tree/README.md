@@ -2,7 +2,7 @@
 
 Splay是一种伸展树，左旋右旋如下：
 
-![img](1349877565_2986.png)
+![img](../img/Rotation.png)
 
 [图片来源](https://blog.csdn.net/a_comme_amour/article/details/79382104)
 
@@ -50,10 +50,6 @@ void rotate(shared_ptr<Node> t){
 }
 ```
 
-左右旋转可以自己多画一下，如下是一个右旋：
-
-![img](右旋.PNG)
-
 下面是扭转代码，即Splay函数
 
 ```cpp
@@ -79,3 +75,6 @@ void splay(shared_ptr<Node> t,shared_ptr<Node> p){
 
 这两个也就是代码的核心部分，有了这些，就能把插入删除的均摊时间复杂度降为O(logN);
 
+# SplayTreeMap
+
+依然是依靠Splay所实现。

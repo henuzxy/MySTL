@@ -19,7 +19,7 @@ public:
 		Size = size;
 	}
 	BinaryIndexTree() = delete;
-	/*更改区间范围*/
+
 	void setsize(size_type size) {
 		data.clear();
 		data.resize(size+1);

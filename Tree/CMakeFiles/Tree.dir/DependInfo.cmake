@@ -4,8 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/bytedancde/MyGithub/MySTL/Tree/SplayTreeSet.cpp" "/Users/bytedancde/MyGithub/MySTL/CMakeFiles/Demo.dir/Tree/SplayTreeSet.cpp.o"
-  "/Users/bytedancde/MyGithub/MySTL/main.cpp" "/Users/bytedancde/MyGithub/MySTL/CMakeFiles/Demo.dir/main.cpp.o"
+  "/Users/bytedancde/MyGithub/MySTL/Tree/SplayTreeSet.cpp" "/Users/bytedancde/MyGithub/MySTL/Tree/CMakeFiles/Tree.dir/SplayTreeSet.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedancde/MyGithub/MySTL/CMakeFiles /Users/bytedancde/MyGithub/MySTL/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /Users/bytedancde/MyGithub/MySTL && $(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedancde/MyGithub/MySTL/CMakeFiles /Users/bytedancde/MyGithub/MySTL/Tree/CMakeFiles/progress.marks
+	cd /Users/bytedancde/MyGithub/MySTL && $(MAKE) -f CMakeFiles/Makefile2 Tree/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedancde/MyGithub/MySTL/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /Users/bytedancde/MyGithub/MySTL && $(MAKE) -f CMakeFiles/Makefile2 Tree/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,98 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/bytedancde/MyGithub/MySTL && $(MAKE) -f CMakeFiles/Makefile2 Tree/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/bytedancde/MyGithub/MySTL && $(MAKE) -f CMakeFiles/Makefile2 Tree/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/bytedancde/MyGithub/MySTL && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named Demo
+# Convenience name for target.
+Tree/CMakeFiles/Tree.dir/rule:
+	cd /Users/bytedancde/MyGithub/MySTL && $(MAKE) -f CMakeFiles/Makefile2 Tree/CMakeFiles/Tree.dir/rule
+.PHONY : Tree/CMakeFiles/Tree.dir/rule
 
-# Build rule for target.
-Demo: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Demo
-.PHONY : Demo
+# Convenience name for target.
+Tree: Tree/CMakeFiles/Tree.dir/rule
 
-# fast build rule for target.
-Demo/fast:
-	$(MAKE) -f CMakeFiles/Demo.dir/build.make CMakeFiles/Demo.dir/build
-.PHONY : Demo/fast
-
-#=============================================================================
-# Target rules for targets named Tree
-
-# Build rule for target.
-Tree: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Tree
 .PHONY : Tree
 
 # fast build rule for target.
 Tree/fast:
-	$(MAKE) -f Tree/CMakeFiles/Tree.dir/build.make Tree/CMakeFiles/Tree.dir/build
+	cd /Users/bytedancde/MyGithub/MySTL && $(MAKE) -f Tree/CMakeFiles/Tree.dir/build.make Tree/CMakeFiles/Tree.dir/build
 .PHONY : Tree/fast
 
-Tree/SplayTreeSet.o: Tree/SplayTreeSet.cpp.o
+SplayTreeSet.o: SplayTreeSet.cpp.o
 
-.PHONY : Tree/SplayTreeSet.o
-
-# target to build an object file
-Tree/SplayTreeSet.cpp.o:
-	$(MAKE) -f CMakeFiles/Demo.dir/build.make CMakeFiles/Demo.dir/Tree/SplayTreeSet.cpp.o
-.PHONY : Tree/SplayTreeSet.cpp.o
-
-Tree/SplayTreeSet.i: Tree/SplayTreeSet.cpp.i
-
-.PHONY : Tree/SplayTreeSet.i
-
-# target to preprocess a source file
-Tree/SplayTreeSet.cpp.i:
-	$(MAKE) -f CMakeFiles/Demo.dir/build.make CMakeFiles/Demo.dir/Tree/SplayTreeSet.cpp.i
-.PHONY : Tree/SplayTreeSet.cpp.i
-
-Tree/SplayTreeSet.s: Tree/SplayTreeSet.cpp.s
-
-.PHONY : Tree/SplayTreeSet.s
-
-# target to generate assembly for a file
-Tree/SplayTreeSet.cpp.s:
-	$(MAKE) -f CMakeFiles/Demo.dir/build.make CMakeFiles/Demo.dir/Tree/SplayTreeSet.cpp.s
-.PHONY : Tree/SplayTreeSet.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
+.PHONY : SplayTreeSet.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Demo.dir/build.make CMakeFiles/Demo.dir/main.cpp.o
-.PHONY : main.cpp.o
+SplayTreeSet.cpp.o:
+	cd /Users/bytedancde/MyGithub/MySTL && $(MAKE) -f Tree/CMakeFiles/Tree.dir/build.make Tree/CMakeFiles/Tree.dir/SplayTreeSet.cpp.o
+.PHONY : SplayTreeSet.cpp.o
 
-main.i: main.cpp.i
+SplayTreeSet.i: SplayTreeSet.cpp.i
 
-.PHONY : main.i
+.PHONY : SplayTreeSet.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Demo.dir/build.make CMakeFiles/Demo.dir/main.cpp.i
-.PHONY : main.cpp.i
+SplayTreeSet.cpp.i:
+	cd /Users/bytedancde/MyGithub/MySTL && $(MAKE) -f Tree/CMakeFiles/Tree.dir/build.make Tree/CMakeFiles/Tree.dir/SplayTreeSet.cpp.i
+.PHONY : SplayTreeSet.cpp.i
 
-main.s: main.cpp.s
+SplayTreeSet.s: SplayTreeSet.cpp.s
 
-.PHONY : main.s
+.PHONY : SplayTreeSet.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Demo.dir/build.make CMakeFiles/Demo.dir/main.cpp.s
-.PHONY : main.cpp.s
+SplayTreeSet.cpp.s:
+	cd /Users/bytedancde/MyGithub/MySTL && $(MAKE) -f Tree/CMakeFiles/Tree.dir/build.make Tree/CMakeFiles/Tree.dir/SplayTreeSet.cpp.s
+.PHONY : SplayTreeSet.cpp.s
 
 # Help Target
 help:
@@ -198,14 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Demo"
 	@echo "... Tree"
-	@echo "... Tree/SplayTreeSet.o"
-	@echo "... Tree/SplayTreeSet.i"
-	@echo "... Tree/SplayTreeSet.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... SplayTreeSet.o"
+	@echo "... SplayTreeSet.i"
+	@echo "... SplayTreeSet.s"
 .PHONY : help
 
 
@@ -217,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/bytedancde/MyGithub/MySTL && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

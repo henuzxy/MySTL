@@ -6,6 +6,16 @@ default_target: all
 
 .PHONY : default_target
 
+# The main recursive all target
+all:
+
+.PHONY : all
+
+# The main recursive preinstall target
+preinstall:
+
+.PHONY : preinstall
+
 #=============================================================================
 # Special targets provided by cmake.
 
@@ -35,10 +45,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /usr/local/Cellar/cmake/3.15.4/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /usr/local/Cellar/cmake/3.15.4/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -52,22 +62,12 @@ CMAKE_BINARY_DIR = /Users/bytedancde/MyGithub/MySTL
 #=============================================================================
 # Directory level rules for the build root directory
 
-# The main recursive "all" target.
-all: CMakeFiles/Demo.dir/all
-all: Base/all
-
-.PHONY : all
-
 # The main recursive "clean" target.
 clean: CMakeFiles/Demo.dir/clean
 clean: Base/clean
+clean: Tree/clean
 
 .PHONY : clean
-
-# The main recursive "preinstall" target.
-preinstall: Base/preinstall
-
-.PHONY : preinstall
 
 #=============================================================================
 # Target rules for target CMakeFiles/Demo.dir
@@ -76,12 +76,17 @@ preinstall: Base/preinstall
 CMakeFiles/Demo.dir/all:
 	$(MAKE) -f CMakeFiles/Demo.dir/build.make CMakeFiles/Demo.dir/depend
 	$(MAKE) -f CMakeFiles/Demo.dir/build.make CMakeFiles/Demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bytedancde/MyGithub/MySTL/CMakeFiles --progress-num=1,2 "Built target Demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bytedancde/MyGithub/MySTL/CMakeFiles --progress-num=1,2,3 "Built target Demo"
 .PHONY : CMakeFiles/Demo.dir/all
+
+# Include target in all.
+all: CMakeFiles/Demo.dir/all
+
+.PHONY : all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Demo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedancde/MyGithub/MySTL/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedancde/MyGithub/MySTL/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Demo.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedancde/MyGithub/MySTL/CMakeFiles 0
 .PHONY : CMakeFiles/Demo.dir/rule
@@ -104,15 +109,65 @@ Base/all:
 
 .PHONY : Base/all
 
+# Recursive "preinstall" directory target.
+Base/preinstall:
+
+.PHONY : Base/preinstall
+
 # Recursive "clean" directory target.
 Base/clean:
 
 .PHONY : Base/clean
 
-# Recursive "preinstall" directory target.
-Base/preinstall:
+#=============================================================================
+# Directory level rules for directory Tree
 
-.PHONY : Base/preinstall
+# Recursive "all" directory target.
+Tree/all: Tree/CMakeFiles/Tree.dir/all
+
+.PHONY : Tree/all
+
+# Recursive "preinstall" directory target.
+Tree/preinstall:
+
+.PHONY : Tree/preinstall
+
+# Recursive "clean" directory target.
+Tree/clean: Tree/CMakeFiles/Tree.dir/clean
+
+.PHONY : Tree/clean
+
+#=============================================================================
+# Target rules for target Tree/CMakeFiles/Tree.dir
+
+# All Build rule for target.
+Tree/CMakeFiles/Tree.dir/all:
+	$(MAKE) -f Tree/CMakeFiles/Tree.dir/build.make Tree/CMakeFiles/Tree.dir/depend
+	$(MAKE) -f Tree/CMakeFiles/Tree.dir/build.make Tree/CMakeFiles/Tree.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/bytedancde/MyGithub/MySTL/CMakeFiles --progress-num=4,5 "Built target Tree"
+.PHONY : Tree/CMakeFiles/Tree.dir/all
+
+# Include target in all.
+all: Tree/CMakeFiles/Tree.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Tree/CMakeFiles/Tree.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedancde/MyGithub/MySTL/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 Tree/CMakeFiles/Tree.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/bytedancde/MyGithub/MySTL/CMakeFiles 0
+.PHONY : Tree/CMakeFiles/Tree.dir/rule
+
+# Convenience name for target.
+Tree: Tree/CMakeFiles/Tree.dir/rule
+
+.PHONY : Tree
+
+# clean rule for target.
+Tree/CMakeFiles/Tree.dir/clean:
+	$(MAKE) -f Tree/CMakeFiles/Tree.dir/build.make Tree/CMakeFiles/Tree.dir/clean
+.PHONY : Tree/CMakeFiles/Tree.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
