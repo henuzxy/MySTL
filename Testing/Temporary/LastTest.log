@@ -1,0 +1,18 @@
+Start testing: Mar 11 01:02 CST
+----------------------------------------------------------
+1/1 Testing: test_run2
+1/1 Test: test_run2
+Command: "/Users/bytedancde/MyGithub/MySTL/Demo" "1" "1"
+Directory: /Users/bytedancde/MyGithub/MySTL
+"test_run2" start time: Mar 11 01:02 CST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test_run2" end time: Mar 11 01:02 CST
+"test_run2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 11 01:02 CST

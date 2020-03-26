@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Tree.dir/SplayTreeSet.cpp.o"
+  "CMakeFiles/Tree.dir/Test.cpp.o"
   "libTree.a"
   "libTree.pdb"
 )
