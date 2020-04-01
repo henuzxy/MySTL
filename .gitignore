@@ -1,3 +1,10 @@
 Makefile
 Demo
+*.cmake
+*.log
+*.cbp
 CMakeFiles
+Makefile
+CMakeCache.*
+.idea
+Testing
