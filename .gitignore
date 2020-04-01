@@ -3,6 +3,7 @@ Demo
 *.cmake
 *.log
 *.cbp
+*.a
 CMakeFiles
 Makefile
 CMakeCache.*
