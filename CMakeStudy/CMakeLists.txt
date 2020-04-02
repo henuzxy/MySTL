@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 2.8)
+
+set(PROJECT_NAME CMakeDemo)
+
+set(CMAKE_CXX_STANDARD 14)
+
+PROJECT(${PROJECT_NAME})
+
+aux_source_directory(. SOURCE)
+
+ADD_EXECUTABLE(${PROJECT_NAME} ${SOURCE})
+
+SET(CMAKE_BUILE_TYPE DEBUG)
+
