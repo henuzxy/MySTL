@@ -8,11 +8,11 @@
 - 占用空间资源，因为所有的目标文件都会链接到一个可执行文件。
 
 ## Linux 下静态库的创建和使用
-#生成目标文件.o(StaticMath.o)
+**生成目标文件.o(StaticMath.o)**
 `g++ -c StaticMath.cpp`
-#通过ar工具将目标文件打包成.a静态库
+**通过ar工具将目标文件打包成.a静态库**
 `ar -crv libstaticmath.a StaticMath.o`
-#使用该静态库，注意-L和-l后没有空格，二期使用的静态库不需要写lib
+**使用该静态库，注意-L和-l后没有空格，二期使用的静态库不需要写lib**
 `g++ TestStatic.cpp -L../Static -lstaticmath`
 
 # 动态库
@@ -27,15 +27,15 @@
 与创建静态库不同的是，不需要打包工具（ar、lib.exe）直接使用编译器创建动态库即可。
 
 ## Linux 下动态库的创建和使用
-#创建与地址无关的目标文件
+**创建与地址无关的目标文件**
 `g++ -fPIC -c DynamicMath.cpp`
-#生成动态库，--shared指定生成动态链接库
+**生成动态库，--shared指定生成动态链接库**
 `g++ -shared -o libdynmath.so DynamicMath.o`
-#可以合并成一个命令
+**可以合并成一个命令**
 `g++ -fPIC -shared -o libdynmath.so DynamicMath.cpp`
-#使用该动态库
+**使用该动态库**
 `g++ TestDynamic.cpp -L../Dynamic -ldynmath`
-#使用该动态库的产物会报错，找不到目标文件。
+**使用该动态库的产物会报错，找不到目标文件**
 原因：
 - 当系统加载可执行代码时候，能够知道其所依赖的库的名字，但是还需要知道绝对路径。此时就需要系统动态载入器(dynamic linker/loader)
 - 对于elf格式的可执行程序，是由ld-linux.so*来完成的，它先后搜索elf文件的 DT_RPATH段—环境变量LD_LIBRARY_PATH—/etc/ld.so.cache文件列表—/lib/,/usr/lib 目录找到库文件后将其载入内存
