@@ -13,5 +13,7 @@
 实现了SplayTreeSet和SplayTreeMap,对应C++ STL中的set和map
 
 ## CMakeStudy
-记录CMake使用的相关知识，和一些练习Demo
+记录CMake使用的相关知识，和一些练习的Demo
 
+## Link
+记录C++ 链接相关的知识，和一些练习的Demo
