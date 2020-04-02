@@ -10,6 +10,7 @@
 
 using namespace std;
 double DynamicMath::add(double a,double b){
+    cout << "OK" << endl;
     return a+b;
 }
 double DynamicMath::sub(double a,double b){

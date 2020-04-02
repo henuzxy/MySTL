@@ -1,19 +1,18 @@
 /*************************************************************************
-	> File Name: DynamicMain.cpp
-	> Author: 
+	> File Name: TestDynamic.cpp
+	> Author:henuzxy 
 	> Mail: 
-	> Created Time: 四  4/ 2 14:14:12 2020
+	> Created Time: Thu 02 Apr 2020 03:32:34 PM CST
  ************************************************************************/
 
 #include<iostream>
-#include "DynamicMath.h"
+#include"DynamicMath.h"
 using namespace std;
 
 int main(void){
-    double a = 10,b = 2;
+    double a = 10;
+    double b = 2;
     cout << DynamicMath::add(a,b) << endl;
-    DynamicMath DM;
-    DM.print();
 
     return 0;
 }
