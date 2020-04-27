@@ -1,21 +1,37 @@
-
+#include <mutex>
 template<typename T>
 class SingleTon{
 public:
-    static T& GetInstance(){
-        std::once_t once;
-        std::call_once(&once,init);
-        return *_value;
+    static T& getinstance(){
+        std::once_flag once;
+        std::call_once(once,[](){
+            ptr = new T();
+        });
+        return *ptr;
     }
-    static void init(){
-        _value = new T();
-    }
+    SingleTon() = default;
 private:
-    static std::once_t once;
-    static T* _value;
-private:
-    SingleTon(const SingleTon &T) = delete;
-    SingleTon& operator = (const SingleTon &T) = delete;
-    SingleTon();
-    ~SingleTon();
+    
+    static T* ptr;
 };
+template<typename T>
+T* SingleTon<T>::ptr = nullptr;
+/*
+//test
+class A:public SingleTon<A>{
+ public:
+        friend SingleTon;
+        int get(){
+                return 2;
+        }
+private:
+    A() = default;
+};
+int main(void){
+   cout <<  A::getinstance().get() << endl;
+
+    return 0;
+}
+
+
+*/
